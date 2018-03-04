@@ -23,4 +23,11 @@ $ geth console --networkid 33 --nodiscover --datadir ./private_net --rpc --rpcad
 
 # インデックス指定でのアカウント確認
 > eth.accounts[0]
+
+# マイニング
+> miner.start(1)
+> miner.stop()
+
+# 送金
+> eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(5, "ether")})
 ```
