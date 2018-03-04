@@ -3,3 +3,4 @@ private_net/geth/
 private_net/keystore/
 private_net/error.log
 private_net/geth.ipc
+history
