@@ -1,10 +1,23 @@
 # command
 
+## init
 ```bash
 ## truffle
-truffle init
+$ truffle init
 
 ## yarn
-yarn init
-yarn add zeppelin-solidity
+$ yarn init
+$ yarn add zeppelin-solidity
+```
+
+
+## compile
+```bash
+$ truffle compile
+```
+
+## deploy
+```$xslt
+$ truffle develop
+truffle(develop)> migrate 
 ```
