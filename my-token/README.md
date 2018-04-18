@@ -1,0 +1,6 @@
+# command
+
+```bash
+truffle init
+
+```
