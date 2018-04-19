@@ -1,6 +1,4 @@
-# command
-
-## init
+# 環境準備
 ```bash
 ## truffle
 $ truffle init
@@ -10,14 +8,16 @@ $ yarn init
 $ yarn add zeppelin-solidity
 ```
 
-
-## compile
-```bash
-$ truffle compile
+# テストネットにデプロイ
 ```
+# コードのコンパイル
+$ truffle compile
 
-## deploy
-```$xslt
+# Ethereum ブロックチェーンのエミュレータの起動
 $ truffle develop
-truffle(develop)> migrate 
+
+# マイグレーション
+truffle(develop)> migrate
+or
+$ truffle migrate --network development
 ```
