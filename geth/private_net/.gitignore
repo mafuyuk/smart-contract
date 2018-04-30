@@ -1,2 +1,4 @@
 geth
 keystore
+error.log
+geth.ipc
