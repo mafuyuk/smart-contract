@@ -37,4 +37,19 @@ null
 > eth.mining
 true
 
+> miner.stop()
+true
+> eth.mining
+false
 ```
+
+
+## 残高確認
+```
+> eth.getBalance(eth.accounts[0])
+2.7e+21
+> web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+2700
+
+```
+
