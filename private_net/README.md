@@ -51,4 +51,14 @@ true
 > web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
 1175
 
+# 送金前にロックを解除しないといけない
+> personal.unlockAccount(eth.accounts[0])
+Unlock account 0x7001a118c14a5b271c17994addaef9b7f858a464
+Passphrase: 
+true
+
+
+# 送金
+> eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[2], value: web3.toWei(5, "ether")})
+
 ``` 
