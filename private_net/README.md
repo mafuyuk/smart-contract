@@ -27,5 +27,28 @@ true
 > eth.coinbase
 "0xbd45a56933e55e1c926a49b2ecafd0b68614fff1"
 
+# genesisブロックの確認
+> eth.getBlock(0)
+
+# マイニング開始
+> miner.start(1)
+null
+
+# マイニングの確認
+> eth.mining
+true
+
+# マイニングの停止
+> miner.stop()
+true
+
+
+# 残高確認(wei)
+> eth.getBalance(eth.accounts[0])
+1.01e+21
+
+# 残高確認(ether)
+> web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+1175
 
 ``` 
