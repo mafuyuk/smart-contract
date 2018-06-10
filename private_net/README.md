@@ -107,5 +107,10 @@ $ geth --networkid "10" --nodiscover --datadir . --rpc  --rpcaddr "localhost" --
   value: 5000000000000000000
 }
 
+# etherの保有量をブロックごとに確認
+> web3.fromWei(eth.getBalance(eth.accounts[2], 186), "ether")
+10
+> web3.fromWei(eth.getBalance(eth.accounts[2], 185), "ether")
+0
 
 ``` 
