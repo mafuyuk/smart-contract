@@ -61,4 +61,11 @@ true
 # 送金
 > eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[2], value: web3.toWei(5, "ether")})
 
+# アンロックオプション付きでの起動
+> eth.accounts
+["0x7001a118c14a5b271c17994addaef9b7f858a464", "0xbd45a56933e55e1c926a49b2ecafd0b68614fff1", "0xc8e2f62ed9aeef4385974e646d0b281b08ce8e40"]
+> exit
+$ geth --networkid "10" --nodiscover --datadir . --rpc  --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --rpcapi "eth,net,web3,personal" --targetgaslimit "20000000" console 2>> ./error.log --unlock 0x7001a118c14a5b271c17994addaef9b7f858a464,0xbd45a56933e55e1c926a49b2ecafd0b68614fff1,0xc8e2f62ed9aeef4385974e646d0b281b08ce8e40 --password ./password.txt 
+> eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[2], value: web3.toWei(5, "ether")})
+
 ``` 
