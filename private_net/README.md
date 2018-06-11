@@ -91,20 +91,20 @@ $ geth --networkid "10" --nodiscover --datadir . --rpc  --rpcaddr "localhost" --
 # トランザクションの確認(ブロックに取り込んだ後)
 > eth.getTransaction("0x406bf531a717bfc03c295d94d91e96cb8bd8deea6c06eaa3008feb54da29db9a")
 {
-  blockHash: "0x9554fc46f244bd102cb0e54555d53489419a8219b6a23268f07740736c55cbb3",
-  blockNumber: 186,
-  from: "0x7001a118c14a5b271c17994addaef9b7f858a464",
-  gas: 90000,
-  gasPrice: 18000000000,
-  hash: "0x406bf531a717bfc03c295d94d91e96cb8bd8deea6c06eaa3008feb54da29db9a",
-  input: "0x",
-  nonce: 1,
-  r: "0xca56aebbfe3a32f196725f11b1a69e6453b3e8d8a154f4b5335ed3f9bcaf62fc",
-  s: "0x41151bd28c1316cb452b484863977d90f452524e9a2aefc455c18d9584755668",
-  to: "0xc8e2f62ed9aeef4385974e646d0b281b08ce8e40",
-  transactionIndex: 1,
-  v: "0x65",
-  value: 5000000000000000000
+  blockHash: "0x9554fc46f244bd102cb0e54555d53489419a8219b6a23268f07740736c55cbb3", // トランザクションがどのブロックに含まれているか表す
+  blockNumber: 186, // トランザクションが何番目のブロックに含まれているか表す
+  from: "0x7001a118c14a5b271c17994addaef9b7f858a464", // トランザクションを発行した送信者のアドレス
+  gas: 90000, // 送信者が供給したGasの量
+  gasPrice: 18000000000, // トランザクションで払っても良いと決めたGasの金額
+  hash: "0x406bf531a717bfc03c295d94d91e96cb8bd8deea6c06eaa3008feb54da29db9a", // トランザクションを表すハッシュ
+  input: "0x", // トランザクションに送信されたデータ
+  nonce: 1, // トランザクション以前に送信者が送信したトランザクションの数
+  r: "0xca56aebbfe3a32f196725f11b1a69e6453b3e8d8a154f4b5335ed3f9bcaf62fc", // 送信者のトランザクションを特定する署名を作るために使われる
+  s: "0x41151bd28c1316cb452b484863977d90f452524e9a2aefc455c18d9584755668", // 送信者のトランザクションを特定する署名を作るために使われる
+  to: "0xc8e2f62ed9aeef4385974e646d0b281b08ce8e40", // トランザクションを受け取った受診者のアドレス
+  transactionIndex: 1, // トランザクションがブロックの何番目のトランザクションとして入っているかを表している
+  v: "0x65", // 送信者のトランザクションを特定する署名を作るために使われる
+  value: 5000000000000000000 // 送信者から受信者へ送る量。単位はwei
 }
 
 # etherの保有量をブロックごとに確認
