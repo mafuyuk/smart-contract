@@ -152,7 +152,7 @@ $ geth --networkid "10" --nodiscover --datadir . --rpc  --rpcaddr "localhost" --
   totalDifficulty: 31097657, // このブロック以前の難易度の総和
   transactions: [], // ブロックに取り込まれているトランザクションのハッシュが配列で入っている
   transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421", // ブロックに入っているトランザクションを含んだ木構造のルートノードのハッシュ
-  uncles: []
+  uncles: [] // Uncleブロックのハッシュ配列
 }
 
 ``` 
